@@ -14,8 +14,20 @@ defmodule Notso.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger],
-      mod: {Notso.Application, []}
+      extra_applications: [:hackney, :logger, :jason],
+      env: env(),
+      mod: {Notso, []}
+    ]
+  end
+
+  defp env() do
+    [
+      api_base_url: "https://api.notion.com",
+      pool_options: [
+        timeout: 5_000,
+        max_connections: 10
+      ],
+      use_connection_pool: true
     ]
   end
 
