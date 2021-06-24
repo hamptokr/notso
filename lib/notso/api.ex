@@ -130,7 +130,6 @@ defmodule Notso.API do
   end
 
   defp do_perform_request_and_retry(method, url, headers, body, opts, {:attempts, attempts}) do
-    IO.inspect(body)
     response = :hackney.request(method, url, headers, body, opts)
 
     do_perform_request_and_retry(
