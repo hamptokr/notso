@@ -1,7 +1,7 @@
 defmodule Notso.API do
   @moduledoc """
-  Low-level utilities for interacting with the Notion API. Most of this comes
-  from the `stripity_stripe` library.
+  Low-level utilities for interacting with the Notion API. Most of this is based
+  off the `stripity_stripe` package.
   """
 
   @type method :: :get | :post | :delete | :patch
