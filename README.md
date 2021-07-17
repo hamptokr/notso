@@ -1,21 +1,19 @@
-# Notso
+# notso
 
-**TODO: Add description**
+**This project is not yet available in Hex and is very unstable right now.**
 
-## Installation
+## Usage
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `notso` to your list of dependencies in `mix.exs`:
+`notso` is an HTTP wrapper around the Notion API that also aims to make content
+within Notion composable. See below for an example.
+
+NOTE: This is a goal of `notso` but the API is not completely fleshed out yet.
 
 ```elixir
-def deps do
-  [
-    {:notso, "~> 0.1.0"}
-  ]
+alias Notso.RichText
+
+def example_mention(user) do
+  # This will generate a notion rich text object to be used by the API
+  mention = RichText.mention_user("Kramer Hampton", user)
 end
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/notso](https://hexdocs.pm/notso).
-
