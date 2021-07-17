@@ -22,6 +22,8 @@ defmodule Notso do
   """
   use Application
 
+  @type options :: Keyword.t()
+
   @spec start(Application.start_type(), any) :: {:error, any} | {:ok, pid} | {:ok, pid, any}
   def start(_type, _args) do
     children = Notso.API.supervisor_children()
